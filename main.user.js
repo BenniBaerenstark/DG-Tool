@@ -3991,11 +3991,11 @@
 
     function ress_HZ(lvl){
         var res = new Array()
-        res[RES_FE] = Math.round(6000*Math.pow(2,parseInt(lvl)/2))
-        res[RES_KR] = Math.round(2250*Math.pow(2,parseInt(lvl)/2))
+        res[RES_FE] = Math.round(12000*Math.pow(2,parseInt(lvl)/2))
+        res[RES_KR] = Math.round(4500*Math.pow(2,parseInt(lvl)/2))
         res[RES_FR] = 0
         res[RES_OR] = 0
-        res[RES_FU] = Math.round(3250*Math.pow(2,parseInt(lvl)/2))
+        res[RES_FU] = Math.round(6500*Math.pow(2,parseInt(lvl)/2))
         res[RES_AU] = 0
         return res
     }
