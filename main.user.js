@@ -189,8 +189,8 @@
         table.appendChild(generateOnOFF_option(langString.tool_settings.shipMarket, "shipTool"))
         table.appendChild(generateOnOFF_option(langString.tool_settings.tradeView, "tradeView"))
         const user = getUserName()
-        if((user == "DarthRevan" || user == "JohnMcClane" || user == "SkaT"))table.appendChild(generateOnOFF_option(langString.tool_settings.tradeLog, "tradeLogTool"))
-        if((user == "DarthRevan")) table.appendChild(generateOnOFF_option(langString.tool_settings.eventNotification, "notification"))
+        if((user == "343GuiltySpark" || user == "JohnMcClane" || user == "SkaT"))table.appendChild(generateOnOFF_option(langString.tool_settings.tradeLog, "tradeLogTool"))
+        if((user == "343GuiltySpark")) table.appendChild(generateOnOFF_option(langString.tool_settings.eventNotification, "notification"))
 
         parent.setAttribute("align", "center");
         parent.appendChild(table)
@@ -2222,6 +2222,10 @@
         btn.innerHTML = ' [  <a href="#" id="trade_ship_set">' + langString.trade.place + '</a>  ] '
         btn.addEventListener("click", setShipTrade, false);
 
+        var btn2 = document.createElement("a");
+        btn2.innerHTML = ' [  <a href="#" id="trade_ship_set">' + langString.trade.request + '</a>  ] '
+        btn2.addEventListener("click", requestShipTrade, false);
+
         var values = getShipNames();
         ship_select = document.createElement("select");
         ship_select.name = "shipSelect";
@@ -2301,6 +2305,7 @@
         input_td.appendChild(ship_select)
         input_td.appendChild(ship_input)
         input_td.appendChild(btn)
+        input_td.appendChild(btn2)
         input_tr.appendChild(input_td)
         table.appendChild(input_tr)
 
@@ -2439,12 +2444,46 @@
         window[6].document.getElementById("tf_res3").value = quantity * ships[ship].or
         window[6].document.getElementById("tf_res4").value = quantity * ships[ship].fz
         window[6].document.getElementById("tf_res5").value = quantity * ships[ship].au
+        window[6].document.getElementById("tt_res0").value = 1
+        window[6].document.getElementById("tt_res1").value = ""
+        window[6].document.getElementById("tt_res2").value = ""
+        window[6].document.getElementById("tt_res3").value = ""
+        window[6].document.getElementById("tt_res4").value = ""
+        window[6].document.getElementById("tt_res5").value = ""
         if (parseInt(quantity) >= 1){
             const heute = new Date();
             var h = (heute.getHours())%24+""
             var m = heute.getMinutes()+""
             window[6].document.getElementsByName("trade_comment")[0].value = h.padStart(2, '0')+":" + m.padStart(2, '0') + " // " + quantity + " x " + ships[ship].name
             window[6].document.getElementById("tt_res0").value = 1
+        }
+        else{
+            window[6].document.getElementsByName("trade_comment")[0].value = ""
+            window[6].document.document.getElementById("tt_res0").value = ""
+        }
+    }
+
+    function requestShipTrade(){
+        var ship = ship_select.selectedIndex
+        var quantity = ship_input.value
+        window[6].document.getElementById("tt_res0").value = quantity * ships[ship].fe
+        window[6].document.getElementById("tt_res1").value = quantity * ships[ship].kr
+        window[6].document.getElementById("tt_res2").value = quantity * ships[ship].fr
+        window[6].document.getElementById("tt_res3").value = quantity * ships[ship].or
+        window[6].document.getElementById("tt_res4").value = quantity * ships[ship].fz
+        window[6].document.getElementById("tt_res5").value = quantity * ships[ship].au
+        window[6].document.getElementById("tf_res0").value = 1
+        window[6].document.getElementById("tf_res1").value = ""
+        window[6].document.getElementById("tf_res2").value = ""
+        window[6].document.getElementById("tf_res3").value = ""
+        window[6].document.getElementById("tf_res4").value = ""
+        window[6].document.getElementById("tf_res5").value = ""
+        if (parseInt(quantity) >= 1){
+            const heute = new Date();
+            var h = (heute.getHours())%24+""
+            var m = heute.getMinutes()+""
+            window[6].document.getElementsByName("trade_comment")[0].value = h.padStart(2, '0')+":" + m.padStart(2, '0') + " // " + quantity + " x " + ships[ship].name
+            window[6].document.getElementById("tf_res0").value = 1
         }
         else{
             window[6].document.getElementsByName("trade_comment")[0].value = ""
