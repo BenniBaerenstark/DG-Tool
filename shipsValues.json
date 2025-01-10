@@ -24,7 +24,7 @@
     {
       "shipClass": "Schwer",
       "att": 3436,
-      "def": 4.446,
+      "def": 4446,
       "drive": "NUK",
       "drive_s": 160,
       "freight": 140640,
