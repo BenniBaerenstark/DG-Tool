@@ -22,22 +22,22 @@
       "au": 250
     },
     {
-      "name": "ZAPfenstreich-Klasse",
       "shipClass": "Schwer",
-      "att": 170,
-      "def": 976,
-      "drive": "HYP",
-      "drive_s": 114,
-      "freight": 29300,
+      "att": 3436,
+      "def": 4.446,
+      "drive": "NUK",
+      "drive_s": 160,
+      "freight": 140640,
       "lkom": false,
       "tt": true,
-      "carrier": true,
-      "fe": 175663,
-      "kr": 84727,
-      "fr": 115115,
-      "or": 42263,
-      "fz": 18113,
-      "au": 21221
+      "carrier": false,
+      "fe": 70439,
+      "kr": 52038,
+      "fr": 28405,
+      "or": 8453,
+      "fz": 3623,
+      "au": 2821,
+      "name": "Ange[ZAP]ft-Klasse"
     },
     {
       "name": "Gaudin-Klasse",
@@ -58,6 +58,24 @@
       "au": 120
     },
     {
+      "name": "TannZAPfen-Klasse",
+      "att": 4516,
+      "shipClass": "Schwer",
+      "def": 4446,
+      "drive": "NUK",
+      "drive_s": 160,
+      "freight": 0,
+      "lkom": false,
+      "tt": true,
+      "carrier": false,
+      "fe": 44565,
+      "kr": 56178,
+      "fr": 20125,
+      "or": 8453,
+      "fz": 3623,
+      "au": 2821
+    },
+    {
       "name": "Ulk0r-Klasse",
       "shipClass": "Schwer",
       "att": 13137,
@@ -74,6 +92,42 @@
       "or": 27480,
       "fz": 14520,
       "au": 120
+    },
+    {
+      "name": "ZAPfen-Klasse",
+      "att": 4516,
+      "shipClass": "Schwer",
+      "def": 4446,
+      "drive": "HYP",
+      "drive_s": 154,
+      "freight": 0,
+      "lkom": false,
+      "tt": true,
+      "carrier": false,
+      "fe": 53017,
+      "kr": 68253,
+      "fr": 34615,
+      "or": 42263,
+      "fz": 18113,
+      "au": 2821
+    },
+    {
+      "name": "ZAPfenstreich-Klasse",
+      "att": 170,
+      "shipClass": "Schwer",
+      "def": 976,
+      "drive": "HYP",
+      "drive_s": 114,
+      "freight": 29300,
+      "lkom": false,
+      "tt": true,
+      "carrier": true,
+      "fe": 175663,
+      "kr": 84727,
+      "fr": 115115,
+      "or": 42263,
+      "fz": 18113,
+      "au": 21221
     }
   ]
 }
