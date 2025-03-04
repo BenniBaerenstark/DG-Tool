@@ -128,6 +128,24 @@
       "or": 42263,
       "fz": 18113,
       "au": 21221
+    },
+    {
+      "name": "ZAPpaz-Klasse",
+      "att": 21258,
+      "shipClass": "Schwer",
+      "def": 5983,
+      "drive": "NUK",
+      "drive_s": 139,
+      "freight": 0,
+      "lkom": true,
+      "tt": false,
+      "carrier": false,
+      "fe": 28550,
+      "kr": 45250,
+      "fr": 7900,
+      "or": 33450,
+      "fz": 26650,
+      "au": 150
     }
   ]
 }
